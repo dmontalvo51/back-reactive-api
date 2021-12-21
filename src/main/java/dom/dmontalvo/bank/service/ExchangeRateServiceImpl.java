@@ -2,6 +2,7 @@ package dom.dmontalvo.bank.service;
 
 import com.neovisionaries.i18n.CurrencyCode;
 import dom.dmontalvo.bank.domain.ExchangeRateInfo;
+import dom.dmontalvo.bank.domain.ExchangeRates;
 import dom.dmontalvo.bank.entities.ExchangeRateEntity;
 import org.springframework.stereotype.Service;
 import rx.Observable;
@@ -25,6 +26,11 @@ public class ExchangeRateServiceImpl implements ExchangeRateService {
             return Observable.error(e);
         }
 
+    }
+
+    @Override
+    public Observable<ExchangeRateInfo> updateExchangeRate(ExchangeRates request) {
+        return null;
     }
 
     private ExchangeRateInfo buildExchangeRateResponse(ExchangeRateInfo request) throws NoSuchAlgorithmException {
